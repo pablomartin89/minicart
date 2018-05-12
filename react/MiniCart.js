@@ -14,6 +14,10 @@ import './global.css'
 export class MiniCart extends Component {
   static propTypes = MiniCartPropTypes
 
+  static defaultProps = {
+    showRemoveButton: true,
+  }
+
   static schema = {
     title: 'Mini Cart',
     description: 'The mini cart component',
@@ -36,8 +40,13 @@ export class MiniCart extends Component {
 
   constructor(props) {
     super(props)
-    this.state = { isMouseOnButton: false, isMouseOnMiniCart: false, quantityItems: 0 }
+    this.state = {
+      isMouseOnButton: false,
+      isMouseOnMiniCart: false,
+      quantityItems: 0,
+    }
   }
+
   componentDidMount() {
     document.addEventListener('item:add', () => {
       const { quantityItems } = this.state
@@ -45,7 +54,8 @@ export class MiniCart extends Component {
     })
   }
 
-  handleUpdateQuantityItems = quantity => this.setState({ quantityItems: quantity })
+  handleUpdateQuantityItems = quantity =>
+    this.setState({ quantityItems: quantity })
 
   handleClickButton = () => location.assign('/checkout/#/cart')
 
@@ -59,38 +69,45 @@ export class MiniCart extends Component {
 
   render() {
     const { isMouseOnButton, isMouseOnMiniCart, quantityItems } = this.state
-    const { labelMiniCartEmpty, labelButtonFinishShopping, miniCartIconColor, showRemoveButton } = this.props
-    const quantity = (!this.props.data.loading && !quantityItems) ? this.props.data.orderForm.items.length : quantityItems
+    const {
+      labelMiniCartEmpty,
+      labelButtonFinishShopping,
+      miniCartIconColor,
+      showRemoveButton,
+    } = this.props
+    const quantity =
+      !this.props.data.loading && !quantityItems
+        ? this.props.data.orderForm.items.length
+        : quantityItems
     return (
-      <div className="relative fr" >
+      <div className="relative fr">
         <Button
           icon
           onClick={this.handleClickButton}
           onMouseEnter={this.handleMouseEnterButton}
-          onMouseLeave={this.handleMouseLeaveButton}>
+          onMouseLeave={this.handleMouseLeaveButton}
+        >
           <CartIcon fillColor={miniCartIconColor} />
-          <span className="vtex-minicart__bagde mt1 mr1">
-            {quantity}
-          </span>
+          <span className="vtex-minicart__bagde mt1 mr1">{quantity}</span>
         </Button>
-        {
-          (isMouseOnMiniCart || isMouseOnButton) &&
+        {(isMouseOnMiniCart || isMouseOnButton) && (
           <div
             className="vtex-minicart__box absolute right-0 z-max flex flex-colunm"
             onMouseLeave={this.handleMouseLeaveCartItems}
-            onMouseEnter={this.handleMouseEnterCartItems}>
-            <div className="vtex-minicart__arrow-up absolute top-0 right-0 shadow-3">
-            </div>
+            onMouseEnter={this.handleMouseEnterCartItems}
+          >
+            <div className="vtex-minicart__arrow-up absolute top-0 right-0 shadow-3" />
             <div className="shadow-3 mt3">
               <MiniCartContent
                 data={this.props.data}
                 onUpdateItemsQuantity={this.handleUpdateQuantityItems}
                 showRemoveButton={showRemoveButton}
                 labelMiniCartEmpty={labelMiniCartEmpty}
-                labelButton={labelButtonFinishShopping} />
+                labelButton={labelButtonFinishShopping}
+              />
             </div>
           </div>
-        }
+        )}
       </div>
     )
   }
