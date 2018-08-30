@@ -101,7 +101,7 @@ export default class MiniCartItem extends Component {
                 showSku={showSku} />
             </div>
             <div className="vtex-minicart__item-footer relative flex flex-row pb2 items-center w-100">
-              <div className="vtex-minicart__img-container">
+              <div className="vtex-minicart__img-container h3 w3 mw3">
                 <Image url={imageUrl} alt={name} />
               </div>
               <div className="absolute right-0 bottom-0 mb1">

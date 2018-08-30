@@ -147,7 +147,7 @@ class MiniCartContent extends Component {
       'vtex-minicart__content overflow-x-hidden h-100',
       {
         'vtex-minicart__content--small': !large,
-        'vtex-minicart__content--large': large,
+        'overflow-y-auto': large,
         'vtex-minicart__content-large--footer-small': large && !showDiscount,
         'vtex-minicart__content-large--footer-large': large && showDiscount,
         'overflow-y-scroll': items.length > 3 && !large,
@@ -176,7 +176,7 @@ class MiniCartContent extends Component {
         </div>
         <div className="absolute bottom-0 w-100 bg-white flex flex-column pa4 bt b--silver pt4">
           {showDiscount && (
-            <div className="vtex-minicart__content-discount w-100 mb4">
+            <div className="vtex-minicart__content-discount blue w-100 mb4">
               <span className="ttu b">{labelDiscount}</span>
               <div className="fr">
                 <ProductPrice

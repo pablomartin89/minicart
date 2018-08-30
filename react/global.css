@@ -2,17 +2,6 @@
   height: 125px;
 }
 
-.vtex-minicart__img-container {
-  width: 65px;
-  height: 65px;
-  min-width: 65px;
-}
-
-.vtex-minicart__item-image {
-  width: auto;
-  height: 100%;
-}
-
 .vtex-minicart__box {
   width: 364px;
   top: 100%;
@@ -25,10 +14,6 @@
     display: none;
     visibility: hidden;
   }
-}
-
-.vtex-minicart__content--large {
-  overflow-y: auto;
 }
 
 .vtex-minicart__content--small {
@@ -94,10 +79,6 @@
 
 .vtex-minicart__item-footer {
   height: 68px;
-}
-
-.vtex-minicart__content-discount {
-  color: coral;
 }
 
 .vtex-minicart__item-image-loader {
