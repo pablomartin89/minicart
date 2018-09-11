@@ -53,24 +53,6 @@
   background-color: white;
 }
 
-@media only screen and (min-width: 22em) {
-  .vtex-minicart__sidebar {
-    width: 340px;
-    height: 100vh;
-  }
-}
-
-@media only screen and (max-width: 25em) {
-  body .vtex-minicart-sidebar-open {
-    overflow: hidden;
-  }
-
-  .vtex-minicart__sidebar {
-    width: 100vw;
-    height: 100vh;
-  }
-}
-
 .vtex-minicart__price-container {
   width: 110px;
 }
