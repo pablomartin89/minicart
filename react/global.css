@@ -6,13 +6,11 @@
   width: 364px;
   top: 100%;
   display: block;
-  visibility: visible;
 }
 
 @media only screen and (max-width: 600px) {
   .vtex-minicart__box {
     display: none;
-    visibility: hidden;
   }
 }
 

@@ -93,16 +93,16 @@ class MiniCartContent extends Component {
     let itemPayload = itemsPayload[0]
     const index = orderForm.items.indexOf(itemsPayload[0])
     const newQuantity = quantity - (itemPayloadGrouped.quantity - itemPayload.quantity)
-    let updatedItems = [
+    const updatedItems = [
       {
         id: itemPayload.id,
         index,
         quantity: newQuantity,
-      }
+      },
     ]
 
     if (newQuantity <= 0) {
-      updatedItems[0].quantity = 0;
+      updatedItems[0].quantity = 0
       itemPayload = itemsPayload[1]
       updatedItems.push(
         {
