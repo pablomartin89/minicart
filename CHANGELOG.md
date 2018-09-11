@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Added
-- `IconBars` and `IconUser` components
+- `IconBars`, `IconUser` and `IconShoppingCart` components
 
 ## [6.2.0] - 2018-09-06
 
