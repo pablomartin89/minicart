@@ -29,6 +29,7 @@ const Save = require('./Save').default
 const Search = require('./Search').default
 const Success = require('./Success').default
 const Upload = require('./Upload').default
+const User = require('./User').default
 const Warning = require('./Warning').default
 
 const demoSize = 20
@@ -187,7 +188,10 @@ const demoLabel = 'pb3 code c-muted-1 f6'
         <div className={demoLabel}>Bars</div>
         <Bars size={demoSize} />
       </td>
-      <td />
+      <td>
+        <div className={demoLabel}>User</div>
+        <User size={demoSize} />
+      </td>
     </tr>
   </tbody>
 </table>
