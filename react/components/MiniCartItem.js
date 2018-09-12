@@ -88,13 +88,13 @@ export default class MiniCartItem extends Component {
     const { isRemovingItem } = this.state
 
     return (
-      <div className="vtex-minicart__item relative w-100">
+      <div className="vtex-minicart__item h4 relative w-100">
         <Link
           className="pointer link black-90"
           page={'store/product'}
           params={{ slug: this.getItemId(detailUrl) }}>
           <div className="relative bb b--silver h-100 pa4">
-            <div className={`${showRemoveButton ? 'vtex-minicart__item-name' : 'vtex-minicart__item-name-100'} mb2`}>
+            <div className={`${showRemoveButton ? 'vtex-minicart__item-name' : 'vtex-minicart__item-name-100'} h2 mb3`}>
               <ProductName
                 name={name}
                 skuName={skuName}
@@ -115,7 +115,7 @@ export default class MiniCartItem extends Component {
           </div>
         </Link>
         {enableQuantitySelector &&
-          <div className="absolute top-0 right-0 mt8 pr1 mr4">
+          <div className="absolute top-0 right-0 mt8 pr1 mr4 pt2">
             <NumericStepper
               minValue={1}
               maxValue={maxQuantity}

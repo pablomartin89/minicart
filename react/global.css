@@ -1,48 +1,16 @@
-.vtex-minicart__item {
-  height: 125px;
-}
-
 .vtex-minicart__box {
   width: 364px;
   top: 100%;
-  display: block;
 }
 
-@media only screen and (max-width: 600px) {
-  .vtex-minicart__box {
-    display: none;
-  }
-}
-
-@media only screen and (min-width: 22em) {
+@media only screen and (min-width: 40em) {
   .vtex-minicart__sidebar {
     width: 340px;
   }
 }
 
 .vtex-minicart__content--small {
-  max-height: 374px;
-}
-
-.vtex-minicart__content-large--footer-small {
-  margin-bottom: 56px;
-}
-
-.vtex-minicart__content-large--footer-large {
-  margin-bottom: 95px;
-}
-
-.vtex-minicart__content-container--footer-small {
-  padding-bottom: 56px;
-}
-
-.vtex-minicart__content-container--footer-large {
-  padding-bottom: 90px;
-}
-
-.vtex-minicart-item__remove-btn > .vtex-button {
-  padding: 0px;
-  margin-top: 0.6rem;
+  max-height: 383px;
 }
 
 .vtex-minicart__bagde {
@@ -54,21 +22,9 @@
   right: 7px;
 }
 
-.vtex-minicart__price-container {
-  width: 110px;
-}
-
-.vtex-minicart__item-footer {
-  height: 68px;
-}
-
 .vtex-minicart__item-image-loader {
   width: 100%;
   height: 100%;
-}
-
-.vtex-minicart__item-name {
-  height: 34px;
 }
 
 .vtex-minicart__item-name > .vtex-product-name > .vtex-product-name__brand {
@@ -90,6 +46,11 @@
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 90%;
+}
+
+.vtex-minicart-item__remove-btn > .vtex-button {
+  padding: 0px;
+  margin-top: 0.6rem;
 }
 
 .vtex-minicart-content__footer {

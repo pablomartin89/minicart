@@ -20,7 +20,7 @@ export default class Popup extends Component {
     return (
       <OutsideClickHandler onOutsideClick={onOutsideClick}>
         <div
-          className="vtex-minicart__box absolute z-max flex flex-colunm"
+          className="vtex-minicart__box dn db-ns absolute z-max flex flex-colunm"
           style={boxPositionStyle}
         >
           <div className="shadow-3">
