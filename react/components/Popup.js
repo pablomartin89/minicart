@@ -30,7 +30,7 @@ export default class Popup extends Component {
           style={boxPositionStyle}
         >
           <div className="shadow-3">
-            <div className="vtex-minicart__arrow-up absolute top-0 right-0 shadow-3" />
+            <div className="vtex-minicart__arrow-up absolute top-0 right-0 shadow-3 bg-white h2 w2 rotate-45" />
             <div className={classes}>{children}</div>
           </div>
         </div>

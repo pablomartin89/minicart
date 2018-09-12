@@ -46,11 +46,7 @@
 }
 
 .vtex-minicart__arrow-up {
-  transform: rotate(45deg);
-  width: 25px;
-  height: 25px;
   right: 7px;
-  background-color: white;
 }
 
 .vtex-minicart__price-container {
