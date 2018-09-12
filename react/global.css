@@ -14,9 +14,14 @@
   }
 }
 
+@media only screen and (min-width: 22em) {
+  .vtex-minicart__sidebar {
+    width: 340px;
+  }
+}
+
 .vtex-minicart__content--small {
   max-height: 374px;
-  background-color: white;
 }
 
 .vtex-minicart__content-large--footer-small {
@@ -85,4 +90,8 @@
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 90%;
+}
+
+.vtex-minicart-content__footer {
+  margin-top: auto;
 }
